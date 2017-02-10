@@ -7,6 +7,7 @@ module.exports = {
   hasContextualComponents: function () {
     var VersionChecker = require('ember-cli-version-checker');
 
+    var checker = new VersionChecker(this);
     var dep = checker.for('ember-source', 'npm');
 
     if (!dep.version) {
